@@ -2,5 +2,4 @@
 sistema da Carmelita
 projeto integrador
 
-
-alteração pela web
+Servidor rodando e servindo a pasta pages
