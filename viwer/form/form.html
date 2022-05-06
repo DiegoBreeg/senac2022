@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <!-- <script src="http://localhost:3000/script" defer></script> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Formulário de Cadastro
+    </title>
+</head>
+<body>   
+
+    <div class="container">
+        <div class="imagem">
+            <img src="assets/img/undraw_Ideas_re_7twj.png" alt="">
+        </div>
+        <div class="formulario">
+            <form action="http://localhost:3000/" method="post">
+                <div class="form-header">
+                    <div class="titulo">
+                        <h1>Cadastro de Clientes</h1>
+                    </div>
+                    <div class="login-button">
+                        <button><a href="#">Consultar?</a></button>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="empresa">Nome da Empresa</label>
+                        <input id="empresa" type="text" name="empresa" placeholder="Nome da empresa" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="nome">Nome</label>
+                        <input id="nome" type="text" name="nome" placeholder="Digite o nome completo" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="data">Data de Nascimento</label>
+                        <input id="data" type="date" name="data" placeholder="dd/mm/aaaa" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cpf">CPF ou CNPJ</label>
+                        <input id="cpf" type="text" name="cpf" placeholder="Digite o cpf" required>
+                    </div>                    
+                    
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite o E-mail" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="telefone">Telefone</label>
+                        <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx" required>
+                    </div>                   
+                    
+                </div>
+
+                <div class="tipotributacao">
+                    <div class="opcaotributacao">
+                        <h6>Tipo de tributação</h6>
+                    </div>
+                    <div class="tributacao">
+                        <div class="tributacaoentrada">
+                            <input type="radio" id="lucroreal" name="lucroreal">
+                            <label for="lucroreal">Lucro Real</label>
+                        </div>                        
+
+                        <div class="tributacaoentrada">
+                            <input type="radio" id="lucropresumido" name="lucropresumido">
+                            <label for="lucropresumido">Lucro Presumido</label>
+                        </div>
+
+                        <div class="tributacaoentrada">
+                            <input type="radio" id="simples" name="simples">
+                            <label for="simples">Simples Nacional</label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="continue-button">
+                    <button type="submit">Cadastrar</button>
+                </div>
+
+
+            </form>
+
+        </div>
+
+
+        
+
+    </div>
+
+</body>
+</html>
+
+<!-- //lucro presumido 
+//lucro real
+//simples
+//tipos de tributação -->

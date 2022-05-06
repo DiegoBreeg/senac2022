@@ -5,7 +5,6 @@ function envia() {
     let email = document.querySelector('#email').value
 
 let form =
-
     {
         'name': name,
         'cpf-cnpj': cpf_cnpj,
@@ -15,6 +14,7 @@ let form =
 
     event.preventDefault();
     fazPost('http://localhost:3000/', form);
+    alert('dados postados com sucesso!')
 }
 
 
