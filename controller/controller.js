@@ -18,7 +18,7 @@ const controller =
             console.log(`[server]: ${req.method} root (/) `)            
             console.log(JSON.stringify(req.body))
             console.log('\n')
-            return res.status(200).sendFile(path.resolve() + '/viwer/form/form.html')
+            return res.status(200).sendFile(path.resolve() + '/viwer/form/sucesso.html')
             
         }
     }
