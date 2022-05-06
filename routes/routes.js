@@ -1,25 +1,14 @@
 const { Router } = require('express');
-const path = require('path')
-const routes = Router()
+const path = require('path');
+const controller = require('../controller/controller')
+
+const routes = Router();
 
 
-routes.get('/', (req ,res) => {
-        
-    console.log('[server]: requisição em /')        
-    res.sendFile(path.resolve() + '/viwer/index.html')
-})
+routes.get('/', controller.home)
 
-routes.get('/script', (req ,res) => {
-        
-    console.log('[server]: requisição em /')        
-    return res.sendFile(path.resolve() + '/viwer/index.js')
-})
+routes.get('/script', controller.script)
 
-routes.post('/', (req, res) => {
-
-    console.log(JSON.stringify(req.body))
-    return res.status(200)
-
-})
+routes.post('/', controller.post)
 
 module.exports = routes
