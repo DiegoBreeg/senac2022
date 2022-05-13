@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
-    <!-- <script src="http://localhost:3000/script" defer></script> -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Formulário de Cadastro
-    </title>
+    <title>Formulário de Cadastro</title>
+    <script>
+        function formatar(mascara, documento){
+            var i = documento.value.length;
+            var saida = mascara.substring(0,1);
+            var texto = mascara.substring(i)
+
+            if (texto.substring(0,1) != saida){
+                documento.value += texto.substring(0,1);
+            }
+        }
+    </script>
+
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script> -->
 </head>
 <body>   
 
@@ -17,7 +28,7 @@
             <img src="assets/img/undraw_Ideas_re_7twj.png" alt="">
         </div>
         <div class="formulario">
-            <form action="http://localhost:3000/" method="post">
+            <form action="#">
                 <div class="form-header">
                     <div class="titulo">
                         <h1>Cadastro de Clientes</h1>
@@ -40,12 +51,12 @@
 
                     <div class="input-box">
                         <label for="data">Data de Nascimento</label>
-                        <input id="data" type="date" name="data" placeholder="dd/mm/aaaa" required>
+                        <input id="data" type="date" name="data" placeholder="dd/mm/aaaa" required >
                     </div>
 
                     <div class="input-box">
                         <label for="cpf">CPF ou CNPJ</label>
-                        <input id="cpf" type="text" name="cpf" placeholder="Digite o cpf" required>
+                        <input id="cpf" type="text" name="cpf" placeholder="Digite o CPF ou CNPJ" required>
                     </div>                    
                     
                     <div class="input-box">
@@ -55,52 +66,51 @@
 
                     <div class="input-box">
                         <label for="telefone">Telefone</label>
-                        <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx" required>
+                        <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx" required maxlength="13" OnKeyPress="formatar('## #####-####', this)">
                     </div>                   
                     
                 </div>
 
                 <div class="tipotributacao">
+                    <div class="input-box">
+                        <label for="observacao">Observação</label>
+                        <input id="observacao" type="text" name="observacao" placeholder="Observação" required>
+                    </div>
                     <div class="opcaotributacao">
                         <h6>Tipo de tributação</h6>
                     </div>
                     <div class="tributacao">
                         <div class="tributacaoentrada">
-                            <input type="radio" id="lucroreal" name="lucroreal">
+                            <input type="radio" id="lucroreal" name="radio">
                             <label for="lucroreal">Lucro Real</label>
                         </div>                        
 
                         <div class="tributacaoentrada">
-                            <input type="radio" id="lucropresumido" name="lucropresumido">
+                            <input type="radio" id="lucropresumido" name="radio">
                             <label for="lucropresumido">Lucro Presumido</label>
                         </div>
 
                         <div class="tributacaoentrada">
-                            <input type="radio" id="simples" name="simples">
+                            <input type="radio" id="simples" name="radio">
                             <label for="simples">Simples Nacional</label>
+                        </div>
+
+                        <div class="tributacaoentrada">
+                            <input type="radio" id="mei" name="radio">
+                            <label for="mei">MEI</label>
                         </div>
 
                     </div>
                 </div>
-
                 <div class="continue-button">
-                    <button type="submit">Cadastrar</button>
+                    <button><a href="#"></a>Cadastrar</button>
                 </div>
-
-
             </form>
 
-        </div>
-
-
-        
+        </div>        
 
     </div>
+    
 
 </body>
 </html>
-
-<!-- //lucro presumido 
-//lucro real
-//simples
-//tipos de tributação -->
