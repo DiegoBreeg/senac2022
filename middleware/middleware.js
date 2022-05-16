@@ -3,7 +3,7 @@ const routes = require('../routes/routes')
 
 function middleware(app) {
 
-app.use(express.static('viwer/'))
+app.use(express.static('viwer'))
 app.use(routes)
 
 

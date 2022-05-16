@@ -5,8 +5,8 @@ const controller =
     {
         home: function home(req, res) {            
             
-            console.log(`[server]: ${req.method} /viwer/form/form.html`)        
-            return res.status(200).sendFile(path.resolve() + '/viwer/layout_for_query/index.html')
+            console.log(`[server]: ${req.method}`, path.resolve() + '/layout_for_query/home.html')
+            return res.status(200).sendFile('/home/dviego/dev/senac2022/viwer/layout_for_query/home.html')
         },
         script: function script(req, res) {                 
         
