@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const path = require('path');
-const controller = require('../controller/controller')
+const controller = require('../controller/controller.js')
 
 const routes = Router();
 

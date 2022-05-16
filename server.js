@@ -4,7 +4,7 @@ const app = express(); //instancia app a partir de express
 const port = 3000 //porta do servidor
 
 app.use(express.json()); //parseia para json automaticamente o corpo das req
-app.use(express.urlencoded({extended: true})); //traduz as informações HTT
+app.use(express.urlencoded({extended: true})); //traduz as informações HTTP
 
 
 middleware(app)
